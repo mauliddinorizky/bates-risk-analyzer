@@ -161,7 +161,7 @@ def main():
         st.header("Input")
         ticker = st.text_input("Ticker (Yahoo Finance)", "ANTM.JK").strip().upper()
         period = st.selectbox("Periode data", ["1y", "3y", "5y", "10y", "max"], index=2)
-        horizon = st.select_slider("Horizon (hari kerja)", [21, 63, 126, 252], value=252)
+        horizon = st.select_slider("Horizon (hari kerja)", [1,5,21, 63, 126, 252], value=252)
         consistent = st.radio("Mode parameter", ["Konsisten (tahunan)", "Replikasi skripsi"]).startswith("Konsisten")
         with st.expander("Pengaturan lanjutan"):
             window = st.slider("Window volatilitas (hari)", 5, 60, 20)
